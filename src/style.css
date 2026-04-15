@@ -1,0 +1,204 @@
+@import "tailwindcss";
+
+:root {
+    --neon-blue: #3b82f6;
+    --neon-purple: #a855f7;
+    --neon-pink: #ec4899;
+}
+
+body {
+    background-color: #050505;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, .font-display {
+    font-family: 'Orbitron', sans-serif;
+}
+
+.animated-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, #0a0a1a 0%, #000000 100%);
+    z-index: 0;
+}
+
+.animated-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(59, 130, 246, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: 1;
+}
+
+.animated-bg::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 30%, rgba(59, 130, 246, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 70% 70%, rgba(168, 85, 247, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.05) 0%, transparent 60%);
+    animation: rotate 30s linear infinite;
+    z-index: 2;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.neon-text {
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.8),
+                 0 0 20px rgba(59, 130, 246, 0.4),
+                 0 0 30px rgba(59, 130, 246, 0.2);
+}
+
+.input-glow:focus-within {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    border-color: rgba(59, 130, 246, 0.6);
+}
+
+.btn-glow:hover {
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.5);
+    transform: translateY(-2px);
+}
+
+.card-glow {
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card-glow:hover {
+    transform: translateY(-15px) scale(1.03);
+    border-color: rgba(59, 130, 246, 0.5);
+    background: rgba(59, 130, 246, 0.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
+                0 0 30px rgba(59, 130, 246, 0.2);
+}
+
+.animate-spin-slow {
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.card-flip {
+    perspective: 1000px;
+}
+
+.card-inner {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+@keyframes slide-up {
+    from { transform: translateY(100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slide-up { animation: slide-up 0.4s cubic-bezier(0.23, 1, 0.32, 1) forwards; }
+.animate-fade-out { animation: fade-out 0.5s ease forwards; }
+.animate-fade-in { animation: fade-in 0.5s ease forwards; }
+
+.card-glow.selected {
+    border-color: var(--neon-purple);
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.4);
+}
+
+.card-glow.locked {
+    opacity: 0.5;
+    cursor: not-allowed;
+    filter: grayscale(0.8);
+}
+
+.card-glow.locked:hover {
+    transform: none;
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: none;
+}
+
+.status-badge {
+    text-shadow: 0 0 5px currentColor;
+}
+
+.neon-border-blue { border-color: var(--neon-blue); box-shadow: 0 0 15px rgba(59, 130, 246, 0.3); }
+.neon-border-purple { border-color: var(--neon-purple); box-shadow: 0 0 15px rgba(168, 85, 247, 0.3); }
+.neon-border-pink { border-color: var(--neon-pink); box-shadow: 0 0 15px rgba(236, 72, 153, 0.3); }
+
+/* Admin Table Styles */
+#admin-table-body tr {
+    transition: all 0.2s ease;
+}
+
+#admin-table-body tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.back-btn {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.floating {
+    animation: float 4s ease-in-out infinite;
+}

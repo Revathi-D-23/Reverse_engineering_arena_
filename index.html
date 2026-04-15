@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Engineering Arena | Login</title>
+    <link rel="stylesheet" href="/src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="text-white overflow-hidden custom-scrollbar">
+    <div class="animated-bg"></div>
+    
+    <!-- Loading Spinner -->
+    <div id="loading-overlay" class="fixed inset-0 z-[100] bg-black/80 flex items-center justify-center hidden">
+        <div class="relative">
+            <div class="w-16 h-16 border-4 border-blue-500/20 border-t-blue-500 rounded-full animate-spin"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-8 h-8 border-4 border-purple-500/20 border-t-purple-500 rounded-full animate-spin-slow"></div>
+            </div>
+        </div>
+    </div>
+
+    <main class="relative z-10 min-h-screen flex items-center justify-center p-4">
+        <div class="w-full max-w-lg text-center animate-fade-in">
+            <h1 class="text-5xl md:text-7xl font-black tracking-tighter neon-text mb-2">
+                REVERSE<br>ENGINEERING<br><span class="text-blue-500">ARENA</span>
+            </h1>
+            <p class="text-gray-400 font-medium tracking-widest uppercase text-xs mb-12">Select your role to continue</p>
+            
+            <div class="glass p-10 rounded-[40px] border border-white/10 space-y-8 relative overflow-hidden">
+                <div id="role-selection" class="grid grid-cols-2 gap-6">
+                    <button id="btn-participant" class="group relative p-6 rounded-3xl border border-blue-500/30 bg-blue-500/5 hover:bg-blue-500/20 transition-all active:scale-95">
+                        <div class="text-blue-400 mb-2 flex justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        </div>
+                        <span class="font-bold tracking-widest text-xs">PARTICIPANT</span>
+                    </button>
+                    <button id="btn-admin" class="group relative p-6 rounded-3xl border border-purple-500/30 bg-purple-500/5 hover:bg-purple-600/20 transition-all active:scale-95">
+                        <div class="text-purple-400 mb-2 flex justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        </div>
+                        <span class="font-bold tracking-widest text-xs">ADMIN</span>
+                    </button>
+                </div>
+
+                <div id="input-container" class="hidden space-y-6 animate-slide-up">
+                    <div class="relative input-glow transition-all rounded-2xl flex flex-col gap-4">
+                        <input type="text" id="name-input" placeholder="Enter Name..." 
+                            class="w-full bg-black/50 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-blue-500 transition-all font-mono text-lg text-center placeholder:text-gray-600">
+                        <input type="password" id="admin-password-input" placeholder="Enter Admin Password..." 
+                            class="w-full hidden bg-black/50 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-purple-500 transition-all font-mono text-lg text-center placeholder:text-gray-600">
+                        <input type="text" id="team-id-input" placeholder="Enter Team ID..." 
+                            class="w-full hidden bg-black/50 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-blue-500 transition-all font-mono text-lg text-center placeholder:text-gray-600">
+                    </div>
+                    <button id="login-action-btn" class="w-full bg-white text-black py-5 rounded-2xl font-black tracking-widest hover:bg-gray-200 transition-all shadow-xl active:scale-95 btn-glow">
+                        START MISSION
+                    </button>
+                    <button id="back-to-roles" class="text-xs font-bold text-gray-500 hover:text-white transition-colors uppercase tracking-widest">Change Role</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-8 right-8 z-[200] px-6 py-3 rounded-xl font-bold shadow-2xl transition-all translate-y-20 opacity-0"></div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        display: ['Orbitron', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+    <script type="module" src="/src/login.js"></script>
+</body>
+</html>

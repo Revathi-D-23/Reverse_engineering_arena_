@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Hunt | Dashboard</title>
+    <link rel="stylesheet" href="/src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="text-white overflow-x-hidden custom-scrollbar">
+    <div class="animated-bg"></div>
+    
+    <!-- Loading Spinner -->
+    <div id="loading-overlay" class="fixed inset-0 z-[100] bg-black/80 flex items-center justify-center hidden">
+        <div class="relative">
+            <div class="w-16 h-16 border-4 border-blue-500/20 border-t-blue-500 rounded-full animate-spin"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-8 h-8 border-4 border-purple-500/20 border-t-purple-500 rounded-full animate-spin-slow"></div>
+            </div>
+        </div>
+    </div>
+
+    <main id="app" class="relative z-10 min-h-screen flex flex-col items-center justify-center p-4 md:p-8">
+        <!-- Dashboard Screen -->
+        <section id="dashboard-screen" class="w-full max-w-6xl">
+            <div class="flex justify-between items-center mb-12">
+                <div>
+                    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter neon-text">
+                        MISSION <span class="text-blue-500">CONTROL</span>
+                    </h1>
+                    <div id="system-status" class="text-[10px] font-mono text-blue-400/50 mt-2 tracking-[0.2em] uppercase">System: Initializing...</div>
+                </div>
+                <button id="participant-logout" class="text-xs font-bold tracking-widest text-red-400 hover:text-red-300 transition-colors flex items-center gap-2 bg-white/5 px-4 py-2 rounded-xl border border-white/10">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                    LOGOUT
+                </button>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Round 1 Card -->
+                <div id="card-r1" onclick="console.log('R1 Card Clicked'); handleStartRound1()" class="card-glow glass p-8 rounded-3xl cursor-pointer flex flex-col items-center gap-6 group relative overflow-hidden">
+                    <div class="text-4xl font-black text-blue-500/50 font-mono">01</div>
+                    <h3 class="text-2xl font-bold">BLACK BOX</h3>
+                    <div id="r1-status" class="status-badge px-4 py-1 rounded-full text-xs font-bold tracking-widest bg-green-500/20 text-green-400 border border-green-500/30">UNLOCKED</div>
+                    <button id="btn-r1" onclick="event.stopPropagation(); console.log('R1 Button Clicked'); handleStartRound1()" class="w-full bg-blue-600 py-3 rounded-xl font-bold flex items-center justify-center gap-2">
+                        <span id="btn-r1-icon" class="hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        </span>
+                        <span id="btn-r1-text">START ROUND</span>
+                    </button>
+                </div>
+                <!-- Round 2 Card -->
+                <div id="card-r2" onclick="console.log('R2 Card Clicked'); handleStartRound2()" class="card-glow glass p-8 rounded-3xl cursor-pointer flex flex-col items-center gap-6 group relative overflow-hidden">
+                    <div class="text-4xl font-black text-purple-500/50 font-mono">02</div>
+                    <h3 class="text-2xl font-bold">TREASURE HUNT</h3>
+                    <div id="r2-status" class="status-badge px-4 py-1 rounded-full text-xs font-bold tracking-widest bg-green-500/20 text-green-400 border border-green-500/30">UNLOCKED</div>
+                    <button id="btn-r2" onclick="event.stopPropagation(); console.log('R2 Button Clicked'); handleStartRound2()" class="w-full bg-purple-600 py-3 rounded-xl font-bold flex items-center justify-center gap-2">
+                        <span id="btn-r2-icon" class="hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        </span>
+                        <span id="btn-r2-text">START ROUND</span>
+                    </button>
+                </div>
+                <!-- Round 3 Card -->
+                <div id="card-r3" onclick="console.log('R3 Card Clicked'); handleStartRound3()" class="card-glow glass p-8 rounded-3xl cursor-pointer flex flex-col items-center gap-6 group relative overflow-hidden">
+                    <div class="text-4xl font-black text-pink-500/50 font-mono">03</div>
+                    <h3 class="text-2xl font-bold">PRODUCT ANALYST</h3>
+                    <div id="r3-status" class="status-badge px-4 py-1 rounded-full text-xs font-bold tracking-widest bg-green-500/20 text-green-400 border border-green-500/30">UNLOCKED</div>
+                    <button id="btn-r3" onclick="event.stopPropagation(); console.log('R3 Button Clicked'); handleStartRound3()" class="w-full bg-pink-600 py-3 rounded-xl font-bold flex items-center justify-center gap-2">
+                        <span id="btn-r3-icon" class="hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        </span>
+                        <span id="btn-r3-text">START ROUND</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Round 1 Screen -->
+        <section id="round1-screen" class="hidden w-full max-w-4xl">
+            <button class="back-btn mb-6 flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                BACK TO DASHBOARD
+            </button>
+            <div id="r1-challenge" class="hidden">
+                <div class="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
+                    <div class="glass p-4 rounded-2xl flex items-center gap-4 border border-blue-500/30">
+                        <div class="w-3 h-3 rounded-full bg-blue-500 animate-pulse"></div>
+                        <span class="font-mono text-xl tracking-widest" id="timer">00:00</span>
+                    </div>
+                    <div class="glass p-4 rounded-2xl flex items-center gap-4 border border-purple-500/30">
+                        <span class="text-gray-400 uppercase text-xs font-bold tracking-widest">Attempts Left</span>
+                        <span class="font-mono text-2xl text-purple-400" id="attempts-count">5</span>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="space-y-6">
+                        <div class="glass p-8 rounded-3xl border border-white/10 relative overflow-hidden">
+                            <h2 class="text-2xl font-bold mb-6 flex items-center gap-2"><span class="text-blue-500">#</span> PROBE_INPUT</h2>
+                            <div class="flex gap-4">
+                                <input type="number" id="probe-input" placeholder="Enter integer..." class="flex-1 bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-500 transition-colors font-mono text-lg">
+                                <button id="probe-btn" class="bg-blue-600 px-6 py-3 rounded-xl font-bold">SUBMIT</button>
+                            </div>
+                        </div>
+                        <div class="glass p-8 rounded-3xl border border-white/10 relative overflow-hidden">
+                            <h2 class="text-2xl font-bold mb-6 flex items-center gap-2"><span class="text-purple-500">#</span> DECRYPT_LOGIC</h2>
+                            <div class="space-y-4">
+                                <input type="text" id="final-answer-input" placeholder="f(x) = ..." class="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-purple-500 transition-colors font-mono text-lg">
+                                <div id="submission-error" class="text-red-500 text-xs font-mono hidden"></div>
+                                <button id="submit-final-btn" class="w-full bg-purple-600 py-3 rounded-xl font-bold">INITIALIZE DECRYPTION</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass p-8 rounded-3xl border border-white/10 flex flex-col">
+                        <h2 class="text-2xl font-bold mb-6 flex items-center gap-2"><span class="text-pink-500">#</span> DATA_STREAM</h2>
+                        <div class="flex-1 overflow-auto max-h-[400px] pr-2 custom-scrollbar">
+                            <table class="w-full text-left border-collapse">
+                                <thead><tr class="text-gray-500 text-xs uppercase tracking-widest border-b border-white/5"><th class="pb-4 font-medium">ID</th><th class="pb-4 font-medium">INPUT</th><th class="pb-4 font-medium">OUTPUT</th></tr></thead>
+                                <tbody id="history-body" class="font-mono"></tbody>
+                            </table>
+                            <div id="no-data" class="py-12 text-center text-gray-600 italic">Waiting for input probe...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Round 2 Screen -->
+        <section id="round2-screen" class="hidden w-full max-w-4xl">
+            <button class="back-btn mb-6 flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                BACK TO DASHBOARD
+            </button>
+            <div id="r2-challenge" class="hidden space-y-8">
+                <div class="flex justify-between items-center">
+                    <div class="glass p-4 rounded-2xl border border-purple-500/30 font-mono text-xl tracking-widest" id="timer-r2">00:00</div>
+                    <button id="view-challenge-btn" class="bg-blue-600 px-8 py-4 rounded-xl font-bold shadow-lg shadow-blue-500/20 animate-pulse">VIEW CHALLENGE PAGE</button>
+                </div>
+                <div class="glass p-8 rounded-3xl border border-white/10">
+                    <h2 class="text-2xl font-bold mb-6 flex items-center gap-2"><span class="text-purple-500">#</span> SUBMIT_FLAG</h2>
+                    <div class="flex gap-4">
+                        <input type="text" id="flag-input" placeholder="flag{...}" class="flex-1 bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-purple-500 transition-colors font-mono text-lg">
+                        <button id="submit-flag-btn" class="bg-purple-600 px-8 py-3 rounded-xl font-bold">SUBMIT</button>
+                    </div>
+                    <div id="r2-error" class="text-red-500 text-xs font-mono mt-4 hidden"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Round 3 Screen -->
+        <section id="round3-screen" class="hidden w-full max-w-4xl">
+            <button class="back-btn mb-6 flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                BACK TO DASHBOARD
+            </button>
+            <div id="r3-challenge" class="hidden space-y-8">
+                <div class="flex justify-between items-center mb-6">
+                    <div class="glass p-4 rounded-2xl border border-pink-500/30 font-mono text-xl tracking-widest" id="timer-r3">00:00</div>
+                    <h2 id="product-name" class="text-3xl font-black text-pink-500 tracking-tighter">PRODUCT_NAME</h2>
+                </div>
+                <div class="mb-6 flex justify-center">
+                    <img id="product-image" src="" alt="Product Image" class="w-full max-w-lg rounded-3xl border border-white/10 hidden shadow-2xl object-cover h-[300px]">
+                </div>
+                <div class="glass p-8 rounded-3xl border border-white/10 space-y-6">
+                    <div>
+                        <label class="text-xs uppercase tracking-widest text-gray-500 mb-2 block">Identify Problems</label>
+                        <textarea id="problems-input" class="w-full h-32 bg-black/50 border border-white/10 rounded-xl p-4 focus:outline-none focus:border-pink-500 transition-colors font-mono" placeholder="List the issues you found..."></textarea>
+                    </div>
+                    <div>
+                        <label class="text-xs uppercase tracking-widest text-gray-500 mb-2 block">Suggest Improvements</label>
+                        <textarea id="improvements-input" class="w-full h-32 bg-black/50 border border-white/10 rounded-xl p-4 focus:outline-none focus:border-pink-500 transition-colors font-mono" placeholder="How would you fix them?"></textarea>
+                    </div>
+                    <button id="submit-r3-btn" class="w-full bg-pink-600 py-4 rounded-xl font-bold">SUBMIT ANALYSIS</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Result Modal -->
+        <div id="result-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm hidden">
+            <div class="glass p-10 rounded-[40px] border border-white/20 max-w-md w-full text-center relative overflow-hidden">
+                <div id="modal-glow" class="absolute -top-24 -left-24 w-48 h-48 bg-blue-500/20 blur-[100px]"></div>
+                
+                <div id="success-icon" class="hidden w-20 h-20 bg-green-500/20 text-green-500 rounded-full flex items-center justify-center mx-auto mb-6 border border-green-500/30">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                
+                <div id="failure-icon" class="hidden w-20 h-20 bg-red-500/20 text-red-500 rounded-full flex items-center justify-center mx-auto mb-6 border border-red-500/30">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </div>
+
+                <h2 id="modal-title" class="text-3xl font-black mb-2">ACCESS GRANTED</h2>
+                <p id="modal-message" class="text-gray-400 mb-8">Decryption sequence successful. Logic identified.</p>
+                
+                <div id="stats-display" class="grid grid-cols-2 gap-4 mb-8">
+                    <div class="bg-white/5 p-4 rounded-2xl">
+                        <div class="text-xs text-gray-500 uppercase mb-1">Time Taken</div>
+                        <div id="final-time" class="text-xl font-mono font-bold">00:00</div>
+                    </div>
+                    <div class="bg-white/5 p-4 rounded-2xl">
+                        <div class="text-xs text-gray-500 uppercase mb-1">Attempts</div>
+                        <div id="final-attempts" class="text-xl font-mono font-bold">0/5</div>
+                    </div>
+                </div>
+
+                <button onclick="location.reload()" class="w-full bg-white text-black py-4 rounded-2xl font-black hover:bg-gray-200 transition-colors">
+                    RESTART SEQUENCE
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-8 right-8 z-[200] px-6 py-3 rounded-xl font-bold shadow-2xl transition-all translate-y-20 opacity-0"></div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        display: ['Orbitron', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+    <script type="module" src="/src/script.js"></script>
+</body>
+</html>

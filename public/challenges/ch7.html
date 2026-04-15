@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Round 2 Challenge 7</title>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #1a1a2e; color: #fff; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .card { background-color: #162447; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); text-align: center; width: 350px; }
+        h1 { font-size: 24px; margin-bottom: 10px; color: #43dde6; }
+        p { font-size: 14px; color: #a9a9a9; margin-bottom: 20px; }
+        input { width: 90%; padding: 10px; border-radius: 6px; border: none; outline: none; background: #1f4068; color: #fff; margin-bottom: 15px; }
+        button { background-color: #e43f5a; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 6px; font-weight: bold; width: 100%; transition: 0.3s; }
+        button:hover { background-color: #ff4b68; }
+        #responseMessage { margin-top: 15px; font-weight: bold; font-size: 14px; }
+        .success { color: #4CAF50; }
+        .error { color: #f44336; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Round 2 Challenge</h1>
+        <p>The flag is encrypted. Inspect wisely.</p>
+        <input type="text" id="flagInput" placeholder="Enter flag">
+        <button onclick="submitFlag()">Submit</button>
+        <div id="responseMessage"></div>
+    </div>
+    
+    <script>
+        // Request hidden payload
+        window.onload = () => {
+            console.debug("Hint: We like to check the Network.");
+            fetch(atob('L2NoYWxsZW5nZXMvY2g3LWFwaS5qc29u')).catch(() => {});
+        };
+
+        async function submitFlag() {
+            const flag = document.getElementById('flagInput').value;
+            const resEl = document.getElementById('responseMessage');
+            try {
+                const response = await fetch('/api/round2/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'X-Team-ID': localStorage.getItem('teamId') },
+                    body: JSON.stringify({ flag })
+                });
+                const result = await response.json();
+                if (result.state && result.state.isCorrect) {
+                    resEl.textContent = 'Correct';
+                    resEl.className = 'success';
+                } else {
+                    resEl.textContent = 'Wrong';
+                    resEl.className = 'error';
+                }
+            } catch (err) {
+                resEl.textContent = 'Error submitting flag. Try again.';
+                resEl.className = 'error';
+            }
+        }
+    </script>
+</body>
+</html>

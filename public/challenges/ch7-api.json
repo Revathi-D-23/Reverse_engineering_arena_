@@ -1,0 +1,7 @@
+{
+  "status": "success",
+  "data": {
+    "message": "Here is the hidden flag",
+    "encryptedFlag": "flag{f4k3_4p1_c4ll}"
+  }
+}

@@ -1,0 +1,864 @@
+{
+  "teams": {
+    "56": {
+      "teamId": "56",
+      "teamName": "Techy",
+      "totalScore": 0,
+      "round1": {
+        "startTime": 1775903178954,
+        "isCompleted": false,
+        "timeTaken": null,
+        "assignedId": null,
+        "questionId": "q14",
+        "attempts": 3,
+        "history": [
+          {
+            "attempt": 1,
+            "input": 1,
+            "output": 3
+          },
+          {
+            "attempt": 2,
+            "input": 2,
+            "output": 8
+          }
+        ],
+        "score": 0,
+        "manualScore": 0,
+        "autoScore": 0,
+        "finalAnswer": "",
+        "isCorrect": false
+      },
+      "round2": {
+        "startTime": 1776164623442,
+        "isCompleted": false,
+        "timeTaken": null,
+        "assignedId": "/challenges/ch8.html",
+        "challengeId": "c8",
+        "attempts": 0,
+        "flagAttempts": [],
+        "score": 0,
+        "manualScore": 0,
+        "autoScore": 0,
+        "submittedFlag": "",
+        "isCorrect": false
+      },
+      "round3": {
+        "startTime": null,
+        "isCompleted": false,
+        "timeTaken": null,
+        "assignedId": null,
+        "productId": null,
+        "attempts": 0,
+        "problems": "",
+        "improvements": "",
+        "score": 0,
+        "presentationScore": 0,
+        "viabilityScore": 0
+      }
+    },
+    "123": {
+      "teamId": "123",
+      "teamName": "Techy",
+      "totalScore": 146,
+      "round1": {
+        "startTime": 1775896865324,
+        "isCompleted": true,
+        "timeTaken": 84,
+        "assignedId": null,
+        "questionId": "q11",
+        "attempts": 0,
+        "history": [
+          {
+            "attempt": 1,
+            "input": 1,
+            "output": 4
+          },
+          {
+            "attempt": 2,
+            "input": 2,
+            "output": 9
+          },
+          {
+            "attempt": 3,
+            "input": 3,
+            "output": 16
+          },
+          {
+            "attempt": 4,
+            "input": 4,
+            "output": 25
+          },
+          {
+            "attempt": 5,
+            "input": 5,
+            "output": 36
+          }
+        ],
+        "score": 30,
+        "manualScore": 30,
+        "autoScore": 0,
+        "finalAnswer": "x^2",
+        "isCorrect": false
+      },
+      "round2": {
+        "startTime": 1775896804561,
+        "isCompleted": true,
+        "timeTaken": 201,
+        "assignedId": "/challenges/ch7.html",
+        "challengeId": "c7",
+        "attempts": 0,
+        "flagAttempts": [
+          "Hello"
+        ],
+        "score": 70,
+        "manualScore": 70,
+        "autoScore": 0,
+        "submittedFlag": "Hello",
+        "isCorrect": false
+      },
+      "round3": {
+        "startTime": 1775897037293,
+        "isCompleted": true,
+        "timeTaken": 84,
+        "assignedId": null,
+        "productId": "Laptop Cooling Pad",
+        "attempts": 0,
+        "problems": "",
+        "improvements": "",
+        "score": 46,
+        "presentationScore": 23,
+        "viabilityScore": 23
+      }
+    },
+    "124": {
+      "teamId": "124",
+      "teamName": "Techiee",
+      "totalScore": 118,
+      "round1": {
+        "startTime": 1775897318831,
+        "isCompleted": true,
+        "timeTaken": 48,
+        "assignedId": null,
+        "questionId": "q15",
+        "attempts": 2,
+        "history": [
+          {
+            "attempt": 1,
+            "input": 1,
+            "output": 1
+          },
+          {
+            "attempt": 2,
+            "input": 2,
+            "output": 1
+          },
+          {
+            "attempt": 3,
+            "input": 3,
+            "output": 1
+          }
+        ],
+        "score": 25,
+        "manualScore": 25,
+        "autoScore": 0,
+        "finalAnswer": "sin^2+cos^2",
+        "isCorrect": false
+      },
+      "round2": {
+        "startTime": 1775897370408,
+        "isCompleted": true,
+        "timeTaken": 68,
+        "assignedId": "/challenges/ch7.html",
+        "challengeId": "c7",
+        "attempts": 0,
+        "flagAttempts": [
+          "flag{w1nd0w_gl0b4l}"
+        ],
+        "score": 46,
+        "manualScore": 21,
+        "autoScore": 25,
+        "submittedFlag": "flag{w1nd0w_gl0b4l}",
+        "isCorrect": true
+      },
+      "round3": {
+        "startTime": 1775897441651,
+        "isCompleted": true,
+        "timeTaken": 14,
+        "assignedId": null,
+        "productId": "Ink Cartridge Pen",
+        "attempts": 0,
+        "problems": "rgqfdfd",
+        "improvements": "gsdfdf",
+        "score": 47,
+        "presentationScore": 23,
+        "viabilityScore": 24
+      }
+    },
+    "234": {
+      "teamId": "234",
+      "teamName": "revathi",
+      "totalScore": 37,
+      "round1": {
+        "startTime": 1776055133452,
+        "isCompleted": false,
+        "timeTaken": null,
+        "assignedId": null,
+        "questionId": "q2",
+        "attempts": 5,
+        "history": [],
+        "score": 37,
+        "manualScore": 25,
+        "autoScore": 0,
+        "finalAnswer": "",
+        "isCorrect": false,
+        "logicScore": 12,
+        "accuracyScore": 25
+      },
+      "round2": {
+        "startTime": null,
+        "isCompleted": false,
+        "timeTaken": null,
+        "assignedId": null,
+        "challengeId": null,
+        "attempts": 0,
+        "flagAttempts": [],
+        "score": 0,
+        "manualScore": 0,
+        "autoScore": 0,
+        "submittedFlag": "",
+        "isCorrect": false,
+        "flagScore": 0,
+        "pathScore": 0,
+        "methodScore": 0
+      },
+      "round3": {
+        "startTime": null,
+        "isCompleted": false,
+        "timeTaken": null,
+        "assignedId": null,
+        "productId": null,
+        "attempts": 0,
+        "problems": "",
+        "improvements": "",
+        "score": 0,
+        "presentationScore": 0,
+        "viabilityScore": 0,
+        "clarityScore": 0,
+        "creativityScore": 0,
+        "realismScore": 0,
+        "teamworkScore": 0
+      }
+    },
+    "9876": {
+      "teamId": "9876",
+      "teamName": "xfdh",
+      "totalScore": 0,
+      "round1": {
+        "startTime": null,
+        "isCompleted": false,
+        "timeTaken": null,
+        "assignedId": null,
+        "questionId": null,
+        "attempts": 5,
+        "history": [],
+        "score": 0,
+        "logicScore": 0,
+        "accuracyScore": 0,
+        "autoScore": 0,
+        "finalAnswer": "",
+        "isCorrect": false
+      },
+      "round2": {
+        "startTime": null,
+        "isCompleted": false,
+        "timeTaken": null,
+        "assignedId": null,
+        "challengeId": null,
+        "attempts": 0,
+        "flagAttempts": [],
+        "score": 0,
+        "flagScore": 0,
+        "pathScore": 0,
+        "methodScore": 0,
+        "autoScore": 0,
+        "submittedFlag": "",
+        "isCorrect": false
+      },
+      "round3": {
+        "startTime": 1776189373837,
+        "isCompleted": false,
+        "timeTaken": null,
+        "assignedId": null,
+        "productId": "Extension Board",
+        "attempts": 0,
+        "problems": "",
+        "improvements": "",
+        "score": 0,
+        "clarityScore": 0,
+        "creativityScore": 0,
+        "realismScore": 0,
+        "teamworkScore": 0
+      }
+    },
+    "98765": {
+      "teamId": "98765",
+      "teamName": "dydhtfj",
+      "totalScore": 0,
+      "round1": {
+        "startTime": 1776189195541,
+        "isCompleted": false,
+        "timeTaken": null,
+        "assignedId": null,
+        "questionId": "q20",
+        "attempts": 3,
+        "history": [
+          {
+            "attempt": 1,
+            "input": 2,
+            "output": 1
+          },
+          {
+            "attempt": 2,
+            "input": 5,
+            "output": 10
+          }
+        ],
+        "score": 0,
+        "logicScore": 0,
+        "accuracyScore": 0,
+        "autoScore": 0,
+        "finalAnswer": "",
+        "isCorrect": false
+      },
+      "round2": {
+        "startTime": null,
+        "isCompleted": false,
+        "timeTaken": null,
+        "assignedId": null,
+        "challengeId": null,
+        "attempts": 0,
+        "flagAttempts": [],
+        "score": 0,
+        "flagScore": 0,
+        "pathScore": 0,
+        "methodScore": 0,
+        "autoScore": 0,
+        "submittedFlag": "",
+        "isCorrect": false
+      },
+      "round3": {
+        "startTime": 1776189183631,
+        "isCompleted": false,
+        "timeTaken": null,
+        "assignedId": null,
+        "productId": "Plastic Chair",
+        "attempts": 0,
+        "problems": "",
+        "improvements": "",
+        "score": 0,
+        "clarityScore": 0,
+        "creativityScore": 0,
+        "realismScore": 0,
+        "teamworkScore": 0
+      }
+    },
+    "98765432": {
+      "teamId": "98765432",
+      "teamName": "she",
+      "totalScore": 25,
+      "round1": {
+        "startTime": null,
+        "isCompleted": false,
+        "timeTaken": null,
+        "assignedId": null,
+        "questionId": null,
+        "attempts": 5,
+        "history": [],
+        "score": 0,
+        "logicScore": 0,
+        "accuracyScore": 0,
+        "autoScore": 0,
+        "finalAnswer": "",
+        "isCorrect": false
+      },
+      "round2": {
+        "startTime": 1776188840115,
+        "isCompleted": true,
+        "timeTaken": 16,
+        "assignedId": "/challenges/ch4.html",
+        "challengeId": "c4",
+        "attempts": 0,
+        "flagAttempts": [
+          "flag{c43s4r_sh1ft}"
+        ],
+        "score": 25,
+        "flagScore": 0,
+        "pathScore": 0,
+        "methodScore": 0,
+        "autoScore": 25,
+        "submittedFlag": "flag{c43s4r_sh1ft}",
+        "isCorrect": true
+      },
+      "round3": {
+        "startTime": 1776188965065,
+        "isCompleted": false,
+        "timeTaken": null,
+        "assignedId": null,
+        "productId": "Laptop Cooling Pad",
+        "attempts": 0,
+        "problems": "",
+        "improvements": "",
+        "score": 0,
+        "clarityScore": 0,
+        "creativityScore": 0,
+        "realismScore": 0,
+        "teamworkScore": 0
+      }
+    },
+    "12ID": {
+      "teamId": "12ID",
+      "teamName": "tech",
+      "totalScore": 70,
+      "round1": {
+        "startTime": 1775898032176,
+        "isCompleted": true,
+        "timeTaken": 34,
+        "assignedId": null,
+        "questionId": "q17",
+        "attempts": 2,
+        "history": [
+          {
+            "attempt": 1,
+            "input": 1,
+            "output": 2
+          },
+          {
+            "attempt": 2,
+            "input": 2,
+            "output": 9
+          },
+          {
+            "attempt": 3,
+            "input": 3,
+            "output": 28
+          }
+        ],
+        "score": 30,
+        "manualScore": 30,
+        "autoScore": 0,
+        "finalAnswer": "x^(2)+1",
+        "isCorrect": false
+      },
+      "round2": {
+        "startTime": 1775898099179,
+        "isCompleted": true,
+        "timeTaken": 13,
+        "assignedId": "/challenges/ch1.html",
+        "challengeId": "c1",
+        "attempts": 0,
+        "flagAttempts": [
+          "flag{w1nd0w_gl0b4l}"
+        ],
+        "score": 20,
+        "manualScore": 20,
+        "autoScore": 0,
+        "submittedFlag": "flag{w1nd0w_gl0b4l}",
+        "isCorrect": false
+      },
+      "round3": {
+        "startTime": 1775898145255,
+        "isCompleted": true,
+        "timeTaken": 7,
+        "assignedId": null,
+        "productId": "Laptop Cooling Pad",
+        "attempts": 0,
+        "problems": "jfhhs",
+        "improvements": "njsddfnsk",
+        "score": 20,
+        "presentationScore": 10,
+        "viabilityScore": 10
+      }
+    },
+    "Reva": {
+      "teamId": "Reva",
+      "teamName": "Reva",
+      "totalScore": 0,
+      "round1": {
+        "startTime": 1775898256868,
+        "isCompleted": false,
+        "timeTaken": null,
+        "assignedId": null,
+        "questionId": "q12",
+        "attempts": 0,
+        "history": [
+          {
+            "attempt": 1,
+            "input": 6,
+            "output": 10
+          },
+          {
+            "attempt": 2,
+            "input": 2,
+            "output": 0
+          },
+          {
+            "attempt": 3,
+            "input": 23,
+            "output": 231
+          },
+          {
+            "attempt": 4,
+            "input": 1,
+            "output": 0
+          },
+          {
+            "attempt": 5,
+            "input": 2,
+            "output": 0
+          }
+        ],
+        "score": 0,
+        "manualScore": 0,
+        "autoScore": 0,
+        "finalAnswer": "",
+        "isCorrect": false
+      },
+      "round2": {
+        "startTime": 1776166959108,
+        "isCompleted": false,
+        "timeTaken": null,
+        "assignedId": "/challenges/ch6.html",
+        "challengeId": "c6",
+        "attempts": 0,
+        "flagAttempts": [],
+        "score": 0,
+        "manualScore": 0,
+        "autoScore": 0,
+        "submittedFlag": "",
+        "isCorrect": false
+      },
+      "round3": {
+        "startTime": 1776185369969,
+        "isCompleted": false,
+        "timeTaken": null,
+        "assignedId": null,
+        "productId": "Wired Mouse",
+        "attempts": 0,
+        "problems": "",
+        "improvements": "",
+        "score": 0,
+        "presentationScore": 0,
+        "viabilityScore": 0
+      }
+    },
+    "tec": {
+      "teamId": "tec",
+      "teamName": "tec",
+      "totalScore": null,
+      "round1": {
+        "startTime": 1776167043127,
+        "isCompleted": true,
+        "timeTaken": 54,
+        "assignedId": null,
+        "questionId": "q4",
+        "attempts": 0,
+        "history": [
+          {
+            "attempt": 1,
+            "input": 1,
+            "output": 1
+          },
+          {
+            "attempt": 2,
+            "input": 2,
+            "output": 1
+          },
+          {
+            "attempt": 3,
+            "input": 3,
+            "output": 2
+          },
+          {
+            "attempt": 4,
+            "input": 4,
+            "output": 6
+          },
+          {
+            "attempt": 5,
+            "input": 5,
+            "output": 24
+          }
+        ],
+        "score": null,
+        "logicScore": 0,
+        "accuracyScore": 0,
+        "autoScore": 0,
+        "finalAnswer": "ad",
+        "isCorrect": false
+      },
+      "round2": {
+        "startTime": 1776167069484,
+        "isCompleted": true,
+        "timeTaken": 8,
+        "assignedId": "/challenges/ch10.html",
+        "challengeId": "c10",
+        "attempts": 0,
+        "flagAttempts": [
+          "sddf"
+        ],
+        "score": null,
+        "flagScore": 0,
+        "pathScore": 0,
+        "methodScore": 0,
+        "autoScore": 0,
+        "submittedFlag": "sddf",
+        "isCorrect": false
+      },
+      "round3": {
+        "startTime": 1776167079505,
+        "isCompleted": true,
+        "timeTaken": 24,
+        "assignedId": null,
+        "productId": "Smartphone Tripod",
+        "attempts": 0,
+        "problems": "",
+        "improvements": "a",
+        "score": 0,
+        "clarityScore": 0,
+        "creativityScore": 0,
+        "realismScore": 0,
+        "teamworkScore": 0
+      }
+    },
+    "Re": {
+      "teamId": "Re",
+      "teamName": "re",
+      "totalScore": 0,
+      "round1": {
+        "startTime": 1776167159404,
+        "isCompleted": false,
+        "timeTaken": null,
+        "assignedId": null,
+        "questionId": "q9",
+        "attempts": 5,
+        "history": [],
+        "score": 0,
+        "logicScore": 0,
+        "accuracyScore": 0,
+        "autoScore": 0,
+        "finalAnswer": "",
+        "isCorrect": false
+      },
+      "round2": {
+        "startTime": 1776169081631,
+        "isCompleted": false,
+        "timeTaken": null,
+        "assignedId": "/challenges/ch7.html",
+        "challengeId": "c7",
+        "attempts": 0,
+        "flagAttempts": [],
+        "score": 0,
+        "flagScore": 0,
+        "pathScore": 0,
+        "methodScore": 0,
+        "autoScore": 0,
+        "submittedFlag": "",
+        "isCorrect": false
+      },
+      "round3": {
+        "startTime": null,
+        "isCompleted": false,
+        "timeTaken": null,
+        "assignedId": null,
+        "productId": null,
+        "attempts": 0,
+        "problems": "",
+        "improvements": "",
+        "score": 0,
+        "clarityScore": 0,
+        "creativityScore": 0,
+        "realismScore": 0,
+        "teamworkScore": 0
+      }
+    },
+    "te": {
+      "teamId": "te",
+      "teamName": "Te",
+      "totalScore": null,
+      "round1": {
+        "startTime": 1776184851725,
+        "isCompleted": true,
+        "timeTaken": 63,
+        "assignedId": null,
+        "questionId": "q19",
+        "attempts": 2,
+        "history": [
+          {
+            "attempt": 1,
+            "input": 1,
+            "output": 1
+          },
+          {
+            "attempt": 2,
+            "input": 2,
+            "output": 5
+          },
+          {
+            "attempt": 3,
+            "input": 3,
+            "output": 14
+          }
+        ],
+        "score": null,
+        "logicScore": 0,
+        "accuracyScore": 0,
+        "autoScore": 0,
+        "finalAnswer": "x(x-1)",
+        "isCorrect": false
+      },
+      "round2": {
+        "startTime": 1776184861001,
+        "isCompleted": true,
+        "timeTaken": 115,
+        "assignedId": "/challenges/ch4.html",
+        "challengeId": "c4",
+        "attempts": 0,
+        "flagAttempts": [
+          ""
+        ],
+        "score": null,
+        "flagScore": 0,
+        "pathScore": 0,
+        "methodScore": 0,
+        "autoScore": 0,
+        "submittedFlag": "",
+        "isCorrect": false
+      },
+      "round3": {
+        "startTime": 1776184980119,
+        "isCompleted": true,
+        "timeTaken": 20,
+        "assignedId": null,
+        "productId": "Wired Headphones",
+        "attempts": 0,
+        "problems": "vcgf",
+        "improvements": "mv",
+        "score": 0,
+        "clarityScore": 0,
+        "creativityScore": 0,
+        "realismScore": 0,
+        "teamworkScore": 0
+      }
+    },
+    "R12": {
+      "teamId": "R12",
+      "teamName": "suji",
+      "totalScore": 0,
+      "round1": {
+        "startTime": null,
+        "isCompleted": false,
+        "timeTaken": null,
+        "assignedId": null,
+        "questionId": null,
+        "attempts": 5,
+        "history": [],
+        "score": 0,
+        "logicScore": 0,
+        "accuracyScore": 0,
+        "autoScore": 0,
+        "finalAnswer": "",
+        "isCorrect": false
+      },
+      "round2": {
+        "startTime": 1776187534963,
+        "isCompleted": false,
+        "timeTaken": null,
+        "assignedId": "/challenges/ch8.html",
+        "challengeId": "c8",
+        "attempts": 0,
+        "flagAttempts": [],
+        "score": 0,
+        "flagScore": 0,
+        "pathScore": 0,
+        "methodScore": 0,
+        "autoScore": 0,
+        "submittedFlag": "",
+        "isCorrect": false
+      },
+      "round3": {
+        "startTime": null,
+        "isCompleted": false,
+        "timeTaken": null,
+        "assignedId": null,
+        "productId": null,
+        "attempts": 0,
+        "problems": "",
+        "improvements": "",
+        "score": 0,
+        "clarityScore": 0,
+        "creativityScore": 0,
+        "realismScore": 0,
+        "teamworkScore": 0
+      }
+    },
+    "9876543210": {
+      "teamId": "9876543210",
+      "teamName": "me",
+      "totalScore": 25,
+      "round1": {
+        "startTime": null,
+        "isCompleted": false,
+        "timeTaken": null,
+        "assignedId": null,
+        "questionId": null,
+        "attempts": 5,
+        "history": [],
+        "score": 0,
+        "logicScore": 0,
+        "accuracyScore": 0,
+        "autoScore": 0,
+        "finalAnswer": "",
+        "isCorrect": false
+      },
+      "round2": {
+        "startTime": 1776188614510,
+        "isCompleted": true,
+        "timeTaken": 65,
+        "assignedId": "/challenges/ch1.html",
+        "challengeId": "c1",
+        "attempts": 0,
+        "flagAttempts": [
+          "flag{b4s64_d3c0d3d}"
+        ],
+        "score": 25,
+        "flagScore": 0,
+        "pathScore": 0,
+        "methodScore": 0,
+        "autoScore": 25,
+        "submittedFlag": "flag{b4s64_d3c0d3d}",
+        "isCorrect": true
+      },
+      "round3": {
+        "startTime": 1776188550470,
+        "isCompleted": false,
+        "timeTaken": null,
+        "assignedId": null,
+        "productId": "USB Pen Drive",
+        "attempts": 0,
+        "problems": "",
+        "improvements": "",
+        "score": 0,
+        "clarityScore": 0,
+        "creativityScore": 0,
+        "realismScore": 0,
+        "teamworkScore": 0
+      }
+    }
+  },
+  "globalSettings": {
+    "r1Open": true,
+    "r2Open": true,
+    "r3Open": true
+  }
+}
